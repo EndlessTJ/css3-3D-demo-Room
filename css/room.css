@@ -1,0 +1,102 @@
+body,html{
+    padding:0;
+    margin: 0;
+    overflow: hidden;
+}
+.scene{
+    width:100%;
+    height:100%;
+    position: absolute;
+    top:0;
+    left: 0;
+    perspective: 600px;
+
+}
+.scene .room{
+    width:100%;
+    height:100%;
+    position: absolute;
+    top:0;
+    left:0;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    /*transition: transform 4s ease;*/
+}
+
+.panel{
+    width:100%;
+    height:100%;
+    position: absolute;
+    top:0;
+    left:0;
+    box-shadow: 0 0 150px #999  inset;
+    transform-style: preserve-3d;
+}
+.panel:nth-child(1){
+    background:#eee;
+    transform-origin: top;
+    transform:rotateX(90deg);
+
+}
+.panel:nth-child(2){
+    background: url("../img/墙纸.jpg") no-repeat 14% 0;
+    transform-origin: left;
+    transform:rotateY(-90deg) ;
+}
+.panel:nth-child(3){
+    background: url("../img/墙纸.jpg") repeat 14% 0;
+    transform-origin: right;
+    transform:rotateY(90deg) ;
+}
+.panel:nth-child(4){
+    background: url("../img/照片墙.jpeg") no-repeat center;
+    background-size: contain;
+
+}
+.panel:nth-child(5){
+    background:#afcbcf url("../img/chuanghu.jpg") no-repeat center 15%;
+    background-size: 50% 70%;
+
+}
+.panel:nth-child(6){
+    transform-origin: bottom;
+    transform:rotateX(-90deg);
+    background: url("../img/地板.jpg");
+}
+.panel.left div,.panel.right div{
+    width:8%;
+    height:18%;
+    border:15px solid #ddd;
+    box-shadow: 0 0 5px #666 inset;
+    position: absolute;
+    top: 30%;
+    transform: rotateY(180deg);
+    /*background: #fff;*/
+
+}
+.panel.left div:nth-child(1){
+    left: 12%;
+}
+.panel.left div:nth-child(2){
+    left: 35%;
+}
+.panel.left div:nth-child(3){
+    left: 58%;
+}
+.panel.left div:nth-child(4){
+    left: 81%;
+}
+.panel.right div:nth-child(1){
+    right: 12%;
+}
+.panel.right div:nth-child(2){
+    right: 35%;
+}
+.panel.right div:nth-child(3){
+    right: 58%;
+}
+.panel.right div:nth-child(4){
+    right: 81%;
+}
